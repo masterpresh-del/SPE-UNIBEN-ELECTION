@@ -1,8 +1,8 @@
 Django>=4.2
 gunicorn
-qrcode
-Pillow
-python-dotenv
 psycopg2-binary
 dj-database-url
 whitenoise
+qrcode[pil]
+Pillow
+python-dotenv
