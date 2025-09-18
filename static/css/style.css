@@ -1,1 +1,19 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.card-title {
+    color: #0d6efd;
+}
+
+.card-text {
+    font-size: 0.95rem;
+}
+
+header h1 {
+    color: #0d6efd;
+}
+
+header p {
+    color: #333;
+}
