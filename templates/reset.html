@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Reset Password</h2><form method='post'>{% csrf_token %}<label>New password</label><input name='new_password' type='password' required/><button>Set Password</button></form>{% endblock %}
