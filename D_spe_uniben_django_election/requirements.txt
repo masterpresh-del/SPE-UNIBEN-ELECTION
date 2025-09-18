@@ -1,0 +1,4 @@
+Django>=4.2
+qrcode
+Pillow
+python-dotenv
