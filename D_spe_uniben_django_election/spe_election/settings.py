@@ -1,6 +1,10 @@
 
 import os
 from pathlib import Path
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    DEBUG = os.environ.get("DEBUG" , "False") == "True"
+    SECRET_KEY = os.environ.get("SECRET_KEY","fallback-secret")
+    DATABASE_URL = os.environ.get("DATABASE_URL")
 from django.urls import reverse_lazy
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'unsafe-dev-secret')
