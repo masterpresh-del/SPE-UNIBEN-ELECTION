@@ -1,10 +1,11 @@
 
 import os
+import dj_database_url
 from pathlib import Path
 from django.urls import reverse_lazy
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'unsafe-dev-secret')
-DEBUG = os.environ.get('DEBUG','1') == '1'
+DEBUG = os.environ.get('DEBUG','False') == 'True'
 ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.admin','django.contrib.auth','django.contrib.contenttypes',
