@@ -10,7 +10,7 @@ from django.db import IntegrityError
 def index(request):
     return render(request, 'index.html')
 
-def user_login(request):
+def voter_login(request):
     if request.method=='POST':
         matric = request.POST.get('matric')
         password = request.POST.get('password')
