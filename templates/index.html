@@ -28,8 +28,37 @@
 <header class="container text-center mt-5">
     <h1 class="display-4 fw-bold">Welcome to the SPE UNIBEN Election Portal</h1>
     <p class="lead">Vote safely and securely from anywhere.</p>
-    <a href="/admin/" class="btn btn-success btn-lg mt-3">Admin Login</a>
 </header>
+
+<!-- Voter Login Panel -->
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">Voter Login</h5>
+                    <form method="POST" action="{% url 'voter_login' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-3">
+                        <a href="{% url 'voter_register' %}">Register as a voter</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Features / Info Section -->
 <section class="container my-5">
